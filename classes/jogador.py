@@ -12,4 +12,5 @@ class Jogador():
         
         pass
 
-    
+        #TODO: fix self atributes
+        
