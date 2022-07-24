@@ -14,3 +14,6 @@ class Time():
 
     def nacional_players(players: list()):
         return players
+
+    def search_player(player):
+        pass
