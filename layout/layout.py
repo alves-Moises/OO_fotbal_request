@@ -1,12 +1,9 @@
 from tkinter import *
-'''
-my_image = PhotoImage(file="fundo.png")
-button = Button(image=my_image, highlightthickness=0)
-'''
-#######################
 
-my_image = "assets/fundo_game.png"
+import controllers.player_controller
+import requests
 
+#importaçoes de dados da API
 
 
 
@@ -42,42 +39,56 @@ def request_player():
 
 # montando a janela
 window = Tk()
-window.title("Go Idiomas FlashCards challengermode - by Marco Aurélio Menezes")
+window.title("Super Star Futebol - by Rondinelly Martins")
+
 BACKGROUND_COLOR = "#B1DDC6"
-window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
-##########################################################
-canvas = Canvas(height=580, width=720)
-card_front_image = PhotoImage(file=my_image)
-canvas.create_image(580, 720, image=card_front_image)
-
-oIdioma = canvas.create_text(400, 70, text="inglês", font=("Arial", 15, "italic"), fill="#000000")
-aPalavra = canvas.create_text(400, 150, text='Seja bem vindos', font=("Arial", 70, "bold"), fill="#000000")
-placar = canvas.create_text(700, 80, text='pontos', font=("Arial", 15, "bold"), fill="#9191FF")
+window.config(pady=10,padx=10, bg=BACKGROUND_COLOR)
 
 
+# imagens de fundo
+
+# my_image = "assets/fundo_game.png"
+
+# imagem do topo
+canvas = Canvas(height=720, width=580)
+card_front_image = PhotoImage(file="assets/fundoa1.png")
+canvas.create_image(290, 130, image=card_front_image)
+
+# imagem do rodapé
+card_front_image2 = PhotoImage(file="assets/fundoc1.png")
+canvas.create_image(290, 520, image=card_front_image2)
+
+# cor de fundo
+BACKGROUND_COLOR = "#270c39"
+window.config( bg=BACKGROUND_COLOR)
+
+
+
+# entradas de dados #
+input_field = Entry(width=35)
+input_field.grid(row=7,column=1,columnspan=2, rowspan=2)
+input_field.config(bg="#FFFFFF", fg="#000000",highlightthickness=0, font=("Arial", 15, "bold"))
+input_field.insert(0,"")
+
+
+#botoes
+
+
+button_player = Button(text="Jogador", width=10, command=request_player)
+button_player.grid(row=11,column=0)
+
+button_player2 = Button(text="jogador ID", width=10, command=request_player)
+button_player2.grid(row=11,column=1)
+
+button_player3 = Button(text="league", width=10, command=request_player)
+button_player3.grid(row=11,column=2)
+
+button_player4 = Button(text="time por País", width=10, command=request_player)
+button_player4.grid(row=11,column=3)
+
+# montando a janela
 canvas.config(bg=BACKGROUND_COLOR, highlightthickness=0)
-canvas.grid(row=0, column=0, columnspan=2)
-##########################################################
-# Buttons
-
-known2_button = Button(text= "batata",font=("Arial", 30, "italic"), width=15, height=1)#, command=pass)#Button(image= check2_image,highlightthickness=0)#,text="Unknown", width=10)#, command=unknown)
-# known_button.config(bg=BACKGROUND_COLOR, highlightthickness=0)
-# canvas.create_text(400, 263, text="palavra", font=("Arial", 60, "italic"), fill="#000000")
-known2_button.grid(row=2, column=1)
-
-# canvas.pack()
-
-# card_back_image = PhotoImage(file="img/card_back.png")
-# window.geometry("500x500")
-
-
-
-
-
-
-
-
-
+canvas.grid(row=0, column=0, columnspan=16, rowspan=30)
 
 
 window.mainloop()
