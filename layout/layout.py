@@ -9,6 +9,38 @@ my_image = "assets/fundo_game.png"
 
 
 
+
+# funçoes de interface
+
+
+
+
+
+def placar_visual_jogador(dados):
+    placar = canvas.create_text(100, 370, 
+                                text='aaasdasd\nasdasd\nasdasd\n' * 40,
+                                font=("Arial", 15, "bold"), fill="#9191FF", anchor=W)
+
+def request_player():
+    player_name = input_field.get()
+
+    data_players = controllers.player_controller.search_player(player_name)
+    # print(data_players)
+    
+    #tratamento final
+    # temp_list = list()
+
+    
+    # for data in data_players:
+    #     temp_list.append(data.name)
+    #     temp_list.append('\n')
+
+    # print(temp_list)
+    # placar_visual_jogador(temp_list)
+
+
+
+# montando a janela
 window = Tk()
 window.title("Go Idiomas FlashCards challengermode - by Marco Aurélio Menezes")
 BACKGROUND_COLOR = "#B1DDC6"
