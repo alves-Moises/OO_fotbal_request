@@ -1,7 +1,7 @@
 from tkinter import *
 
 import controllers.player_controller
-import requests
+import layout.result_layout
 
 #importaçoes de dados da API
 
