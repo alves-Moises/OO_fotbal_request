@@ -6,9 +6,17 @@ def new_window(algo):
     scrollbar.pack(side=RIGHT, fill=Y)
     azul = (["banana","yolando","acelga","romulo"],["banana","yolando","acelga","romulo"],["banana","yolando","acelga","romulo"])
     mylist = Listbox(root, yscrollcommand=scrollbar.set)
-    for line in azul:
-        print(line)
-        mylist.insert(END, line)
+
+
+    for player in data:
+
+        mylist.insert(END, str(f"Id: {player.get_id()}"))
+        mylist.insert(END, str(f"Nome: {player.get_name()}"))
+        mylist.insert(END, str(f"Nacionalidade: {player.get_nationality()}"))
+        mylist.insert(END, str(f"Nascimento: {player.get_birthdate()}"))
+        mylist.insert(END, str(f'Idade: {player.get_age()}'))
+        mylist.insert(END, '')
+
 
     mylist.pack(side=LEFT, fill=BOTH)
     scrollbar.config(command=mylist.yview)
