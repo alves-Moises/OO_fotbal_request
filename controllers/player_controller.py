@@ -5,7 +5,7 @@ import classes.player
 
 api_requests = ApiRequests()
 
-def search_player(name):
+def search_player_by_name(name):
 
     player_list = list() #list of player's objects
 
