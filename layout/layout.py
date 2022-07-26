@@ -28,9 +28,18 @@ def request_player():
         print("Jogador não encontrado")
 
         return
-    layout.result_layout.new_window(data_players)
+    layout.result_layout.player_result(data_players)
 
+def request_player_by_id():
+    player_name = input_field.get()
 
+    data_player = controllers.player_controller.search_player_by_id(player_name)
+    if not data_player:
+        print("Jogador não encontrado")
+        
+        return
+
+    layout.result_layout.player_result_id(data_player)
 
 
 
