@@ -1,7 +1,6 @@
+# coding=UTF-8
 import layout.layout
 
 
 
 
-
-def teste(): print("test")
