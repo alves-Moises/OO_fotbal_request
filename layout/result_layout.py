@@ -26,4 +26,26 @@ def player_result(data):
    
     mainloop()
 
+def player_result_id(data):
+
+    root = Tk()
+    scrollbar = Scrollbar(root)
+    scrollbar.pack(side=RIGHT, fill=Y)
+    info = Listbox(root, yscrollcommand=scrollbar.set)
+
+    info.insert(END, str(f'Id: {data.get_id()}'))
+    info.insert(END, str(f'Nome: {data.get_name()}'))
+    info.insert(END, str(f'Nacionalidade: {data.get_nationality()}'))
+    info.insert(END, str(f'Nascimento: {data.get_birthdate()}'))
+    info.insert(END, str(f'Idade: {data.get_age()}'))
+    info.insert(END, str(f''))
+    
+
+    info.pack(side=LEFT, fill=BOTH)
+    info.config(width=70, height= 10)
+    scrollbar.config(command=info.yview)
+
+   
+    mainloop()
+
 
