@@ -1,10 +1,10 @@
 from tkinter import *
 
-def new_window(algo):
+def new_window(data):
+
     root = Tk()
     scrollbar = Scrollbar(root)
     scrollbar.pack(side=RIGHT, fill=Y)
-    azul = (["banana","yolando","acelga","romulo"],["banana","yolando","acelga","romulo"],["banana","yolando","acelga","romulo"])
     mylist = Listbox(root, yscrollcommand=scrollbar.set)
 
 
@@ -19,9 +19,11 @@ def new_window(algo):
 
 
     mylist.pack(side=LEFT, fill=BOTH)
+    height= 60 if (len(data) > 12) else (len(data) + 2)
+    mylist.config(width=100, height= height)
     scrollbar.config(command=mylist.yview)
 
+   
     mainloop()
 
 
-    print("seila")
