@@ -12,17 +12,11 @@ import layout.result_layout
 
 
 
-
-def placar_visual_jogador(dados):
-    placar = canvas.create_text(100, 370, 
-                                text='aaasdasd\nasdasd\nasdasd\n' * 40,
-                                font=("Arial", 15, "bold"), fill="#9191FF", anchor=W)
-
-def request_player():
+def request_player_by_name():
     player_name = input_field.get()
 
     #getting data players
-    data_players = controllers.player_controller.search_player(player_name)
+    data_players = controllers.player_controller.search_player_by_name(player_name)
     
     if not data_players: 
         print("Jogador não encontrado")
