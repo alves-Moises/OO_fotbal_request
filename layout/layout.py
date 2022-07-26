@@ -78,16 +78,16 @@ input_field.insert(0,"")
 #botoes
 
 
-button_player = Button(text="Jogador", width=10, command=request_player)
+button_player = Button(text="Jogador", width=10, command=request_player_by_name)
 button_player.grid(row=11,column=0)
 
-button_player2 = Button(text="jogador ID", width=10, command=request_player)
+button_player2 = Button(text="jogador ID", width=10, command=request_player_by_id)
 button_player2.grid(row=11,column=1)
 
-button_player3 = Button(text="league", width=10, command=request_player)
+button_player3 = Button(text="league", width=10, command=request_player_by_name)
 button_player3.grid(row=11,column=2)
 
-button_player4 = Button(text="time por País", width=10, command=request_player)
+button_player4 = Button(text="time por País", width=10, command=request_player_by_name)
 button_player4.grid(row=11,column=3)
 
 # montando a janela
