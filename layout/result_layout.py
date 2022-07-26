@@ -1,6 +1,6 @@
 from tkinter import *
 
-def new_window(data):
+def player_result(data):
 
     root = Tk()
     scrollbar = Scrollbar(root)
