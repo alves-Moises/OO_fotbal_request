@@ -21,19 +21,20 @@ def placar_visual_jogador(dados):
 def request_player():
     player_name = input_field.get()
 
+    #getting data players
     data_players = controllers.player_controller.search_player(player_name)
-    # print(data_players)
     
-    #tratamento final
-    # temp_list = list()
+    if not data_players: 
+        print("Jogador não encontrado")
 
-    
-    # for data in data_players:
-    #     temp_list.append(data.name)
-    #     temp_list.append('\n')
+        return
+    layout.result_layout.new_window(data_players)
 
-    # print(temp_list)
-    # placar_visual_jogador(temp_list)
+
+
+
+
+   
 
 
 
