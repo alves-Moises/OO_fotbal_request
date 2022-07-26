@@ -23,3 +23,18 @@ def search_player_by_name(name):
     return player_list
     # print(get_data(player_data))
    
+
+def search_player_by_id(id):
+
+    player_data = json.loads(api_requests.request_player_by_id(id))
+    try:
+        new_data = player_data['data']
+        
+        player = classes.player.Player(new_data['player_id'], new_data['fullname'], new_data['nationality'], new_data['birthdate'], new_data['image_path'])
+        
+    except:
+        return False
+
+    return player
+    # print(new_data)
+    # print("Deu certo.")
