@@ -1,3 +1,6 @@
+from msilib.schema import Error
+
+
 class Player():
     def __init__(self, player_id, name, nationality, birthdate, image_path):
         self.id = player_id
@@ -13,7 +16,7 @@ class Player():
         return self.name
 
     def get_nationality(self):
-        return self.nacionality
+        return self.nationality
 
     def get_birthdate(self):
         return self.birthdate
@@ -22,6 +25,11 @@ class Player():
         return self.image_path
     
     def get_age(self):
-        return 2022 - self.birthdate
+        try:
+            birth = self.birthdate.split('/')
+        except:
+            return ''
 
+
+        return birth[2]
         
