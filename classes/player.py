@@ -5,8 +5,23 @@ class Player():
         self.nationality = nationality
         self.birthdate = birthdate
         self.image_path = image_path
-
-
         
+    def get_id(self):
+        return self.id
+
+    def get_name(self):
+        return self.name
+
+    def get_nationality(self):
+        return self.nacionality
+
+    def get_birthdate(self):
+        return self.birthdate
+    
+    def get_image(self):
+        return self.image_path
+    
+    def get_age(self):
+        return 2022 - self.birthdate
 
         
