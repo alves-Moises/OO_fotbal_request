@@ -15,7 +15,11 @@ class ApiRequests():
         pass
 
     def request_player_by_id(self, id):
-        pass
+        player_url = f"https://soccer.sportmonks.com/api/v2.0/players/{id}?api_token={self._api_token}"
+        response = requests.request("GET", url=player_url)
+        
+        return response.text
+        
 
     def request_player_by_name(self, name):
         name_player_url = f"https://soccer.sportmonks.com/api/v2.0/players/search/:{name}?api_token={self._api_token}"
