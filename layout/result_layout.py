@@ -19,8 +19,8 @@ def player_result(data):
 
 
     mylist.pack(side=LEFT, fill=BOTH)
-    height= 60 if (len(data) > 12) else (len(data) + 2)
-    mylist.config(width=100, height= height)
+    height= 60 if (len(data) > 12) else (len(data) * 6)
+    mylist.config(width=80, height= height)
     scrollbar.config(command=mylist.yview)
 
    
