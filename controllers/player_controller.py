@@ -21,7 +21,6 @@ def search_player_by_name(name):
     
     if player_list == []: return False
     return player_list
-    # print(get_data(player_data))
    
 
 def search_player_by_id(id):
