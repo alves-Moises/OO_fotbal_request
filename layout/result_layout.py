@@ -1,8 +1,9 @@
 from tkinter import *
 
 def player_result(data):
-
+    
     root = Tk()
+    root.title("Jogadores")
     scrollbar = Scrollbar(root)
     scrollbar.pack(side=RIGHT, fill=Y)
     mylist = Listbox(root, yscrollcommand=scrollbar.set)
@@ -29,6 +30,7 @@ def player_result(data):
 def player_result_id(data):
 
     root = Tk()
+    root.title("Jogadores")
     scrollbar = Scrollbar(root)
     scrollbar.pack(side=RIGHT, fill=Y)
     info = Listbox(root, yscrollcommand=scrollbar.set)
@@ -51,6 +53,7 @@ def player_result_id(data):
 def season_result(data):
 
     root = Tk()
+    root.title("Temporada")
     scrollbar = Scrollbar(root)
     scrollbar.pack(side=RIGHT, fill=Y)
     season_list = Listbox(root, yscrollcommand=scrollbar.set)
@@ -77,6 +80,7 @@ def season_result(data):
 def league_result(data):
 
     root = Tk()
+    root.title("Liga")
     scrollbar = Scrollbar(root)
     scrollbar.pack(side=RIGHT, fill=Y)
     mylist = Listbox(root, yscrollcommand=scrollbar.set)
@@ -98,3 +102,4 @@ def league_result(data):
     scrollbar.config(command=mylist.yview)
 
     mainloop()
+
