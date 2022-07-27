@@ -69,8 +69,8 @@ window.config( bg=BACKGROUND_COLOR)
 
 
 # entradas de dados #
-input_field = Entry(width=35)
-input_field.grid(row=7,column=1,columnspan=2, rowspan=2)
+input_field = Entry(width=30)
+input_field.grid(row=8,column=1, columnspan=2)
 input_field.config(bg="#FFFFFF", fg="#000000",highlightthickness=0, font=("Arial", 15, "bold"))
 input_field.insert(0,"")
 
@@ -78,17 +78,29 @@ input_field.insert(0,"")
 #botoes
 
 
+
 button_player = Button(text="Jogador", width=10, command=request_player_by_name)
-button_player.grid(row=11,column=0)
+button_player.grid(row=10,column=1)
 
 button_player2 = Button(text="jogador ID", width=10, command=request_player_by_id)
-button_player2.grid(row=11,column=1)
+button_player2.grid(row=10,column=2)
 
-button_player3 = Button(text="league", width=10, command=request_player_by_name)
-button_player3.grid(row=11,column=2)
+button_player3 = Button(text="temporada", width=10, command=request_season)
+button_player3.grid(row=10,column=3)
 
-button_player4 = Button(text="time por País", width=10, command=request_player_by_name)
-button_player4.grid(row=11,column=3)
+button_player4 = Button(text="time por País", width=10, command='')
+button_player4.grid(row=11,column=1)
+
+
+
+#####
+
+
+button_player5 = Button(text="aaaaaaaa", width=10, command=request_season)
+button_player5.grid(row=11,column=2)
+
+button_player6 = Button(text="Liga", width=10, command=request_league)
+button_player6.grid(row=11,column=3)
 
 # montando a janela
 canvas.config(bg=BACKGROUND_COLOR, highlightthickness=0)
