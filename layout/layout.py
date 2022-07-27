@@ -29,7 +29,7 @@ def request_player_by_id():
 
     data_player = controllers.player_controller.search_player_by_id(player_name)
     if not data_player:
-        print("Jogador não encontrado")
+        print("Jogador não encontrado") 
         
         return
 
