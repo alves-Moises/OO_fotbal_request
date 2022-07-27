@@ -1,17 +1,28 @@
-class Campeonato():
-    def __init__(self, name, country, standings, championship_goals, championship_assists):
+from unicodedata import name
+
+
+class League():
+    def __init__(self, id, name, active, _type, country_id):
+        self.id = id
         self.name = name
-        self.country = country
-        pass
+        self.active = active
+        self.type = _type
+        self.country_id = country_id
 
-    def average_goals(goals):
-        pass
 
-    def top_players(player):
-        pass
+    def get_id(self):
+        return self.id
 
-    def assists():
-        pass
+    def get_name(self):
+        return self.name
 
-    def show_standing():
-        pass
+    def is_active(self):
+        if self.active: return 'sim'
+        return 'não'
+
+    def get_type(self):
+        return self.type
+
+    def country_id(self):
+        return self.country_id
+   
