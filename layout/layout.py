@@ -11,6 +11,10 @@ import layout.result_layout
 
 
 
+def request_season():
+    season = controllers.season_controller.search_season()
+   
+    layout.result_layout.season_result(season)
 
 def request_player_by_name():
     player_name = input_field.get()
