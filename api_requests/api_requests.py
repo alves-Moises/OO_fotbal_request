@@ -16,8 +16,6 @@ class ApiRequests():
 
         return result.text
 
-    def request_country(self, country):
-        pass
 
     def request_team_by_country(self, country):   
         pass
