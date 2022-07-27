@@ -49,3 +49,25 @@ def player_result_id(data):
     mainloop()
 
 
+    root = Tk()
+    scrollbar = Scrollbar(root)
+    scrollbar.pack(side=RIGHT, fill=Y)
+    mylist = Listbox(root, yscrollcommand=scrollbar.set)
+
+    for league in data:
+
+        mylist.insert(END, str(f'Id: {league.get_id()}'))
+        mylist.insert(END, str(f'Nome: {league.get_name()}'))
+        mylist.insert(END, str(f'Está ativo? {league.is_active()}'))
+        mylist.insert(END, str(f'Tipo de liga: {league.get_type()}'))
+        # mylist.insert(END, str(f'Id do país: {league.country_id()}'))
+        mylist.insert(END, str(f''))
+
+
+
+    mylist.pack(side=LEFT, fill=BOTH)
+    height= 60 if (len(data) > 12) else (len(data) * 6)
+    mylist.config(width=80, height= height)
+    scrollbar.config(command=mylist.yview)
+
+    mainloop()
