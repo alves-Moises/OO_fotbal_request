@@ -16,6 +16,15 @@ def request_league():
 
     layout.result_layout.league_result(league_data)
 
+def request_league_by_name():
+    league_name = input_field.get()
+    league_result = controllers.league_controller.request_league_by_name(league_name)
+    if league_result == []:
+        print("Liga não encontrada")
+        return
+
+    layout.result_layout.league_result(league_result)
+
 def request_season():
     season = controllers.season_controller.search_season()
    
