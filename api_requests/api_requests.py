@@ -5,8 +5,16 @@ class ApiRequests():
         
         self._api_token = "YwB4DudVPcTCwkdhblPTSh0ZrKipxrUFDruNbbN7dwua4Wv6kgWDRJZYsolY"
 
-    def request_league(self, league):
-        pass
+    def request_league(self):
+        url = f"https://soccer.sportmonks.com/api/v2.0/leagues?api_token={self._api_token}"
+        result = requests.request("GET", url = url)
+        return result.text
+
+    def request_season(self):
+        url = f"https://soccer.sportmonks.com/api/v2.0/seasons?api_token={self._api_token}"
+        result = requests.request("GET", url = url)
+
+        return result.text
 
     def request_country(self, country):
         pass
