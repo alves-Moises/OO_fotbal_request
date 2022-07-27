@@ -48,6 +48,33 @@ def player_result_id(data):
    
     mainloop()
 
+def season_result(data):
+
+    root = Tk()
+    scrollbar = Scrollbar(root)
+    scrollbar.pack(side=RIGHT, fill=Y)
+    season_list = Listbox(root, yscrollcommand=scrollbar.set)
+    
+
+    for season in data:
+
+        season_list.insert(END, str(f'Id: {season.get_id()}'))
+        season_list.insert(END, str(f'Id da tempoorada: {season.get_league_id()}'))
+        season_list.insert(END, str(f'Nome: {season.get_name()}'))
+        season_list.insert(END, str(f'Id da oartuda atual atual: {season.get_current_round_id()}'))
+        season_list.insert(END, str(f'Estágio atual: {season.get_current_stage()}'))
+        season_list.insert(END, str(''))
+
+
+    season_list.pack(side=LEFT, fill=BOTH)
+
+    height = 60 if len(data) > 10 else (len(data) * 7)
+    season_list.config(width=100, height=height)
+    scrollbar.config(command=season_list.yview)
+
+    mainloop()
+
+def league_result(data):
 
     root = Tk()
     scrollbar = Scrollbar(root)
