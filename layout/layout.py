@@ -1,6 +1,8 @@
 from tkinter import *
 
+import controllers.season_controller
 import controllers.player_controller
+import controllers.league_controller
 import layout.result_layout
 
 #importaçoes de dados da API
