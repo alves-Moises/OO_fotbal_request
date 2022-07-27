@@ -9,7 +9,10 @@ import layout.result_layout
 
 # funçoes de interface
 
+def request_league():
+    league_data = controllers.league_controller.request_league()
 
+    layout.result_layout.league_result(league_data)
 
 def request_season():
     season = controllers.season_controller.search_season()
