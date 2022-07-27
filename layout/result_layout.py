@@ -38,7 +38,7 @@ def player_result_id(data):
     info.insert(END, str(f'Nacionalidade: {data.get_nationality()}'))
     info.insert(END, str(f'Nascimento: {data.get_birthdate()}'))
     info.insert(END, str(f'Idade: {data.get_age()}'))
-    info.insert(END, str(f''))
+    info.insert(END, '')
     
 
     info.pack(side=LEFT, fill=BOTH)
