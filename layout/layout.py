@@ -61,7 +61,7 @@ def request_player_by_id():
 
 # montando a janela
 window = Tk()
-window.title("Super Star Futebol - by Rondinelly Martins")
+window.title("Super Star Futebol - by Moisés Alves")
 
 BACKGROUND_COLOR = "#B1DDC6"
 window.config(pady=10,padx=10, bg=BACKGROUND_COLOR)
