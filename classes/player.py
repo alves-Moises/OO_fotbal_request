@@ -7,6 +7,7 @@ class Player():
         self.nationality = nationality
         self.birthdate = birthdate
         self.image_path = image_path
+        print(image_path)
         
     def get_id(self):
         return self.id
@@ -30,5 +31,7 @@ class Player():
             return ''
 
 
-        return birth[2]
+        return 2022 - int(birth[2])
+
+
         
