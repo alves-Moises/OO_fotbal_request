@@ -1,4 +1,3 @@
-from unicodedata import name
 
 
 class League():
